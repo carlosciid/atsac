@@ -1,0 +1,43 @@
+<!-- order-tracking.component.html -->
+<body>
+  <div class="order-tracking-container">
+    <div class="input-group">
+      <input type="text" #ordenInput placeholder="Ingrese número de orden" class="input-order" pattern="[A-Za-z0-9]*">
+      <button (click)="buscarOrden(ordenInput.value)" class="btn-search">Buscar Orden</button>
+    </div>
+  
+    <div class="status-section">
+      <h3>Estado de la Orden:</h3>
+      <div class="progress-circles">
+        <div class="progress-track"></div>
+        <div>
+          <div class="circle" [class.active]="calcularClaseCirculo(ordenSeleccionada.estado, 'Recibido')"></div>
+        </div>
+        <div>
+          <div class="circle" [class.active]="calcularClaseCirculo(ordenSeleccionada.estado, 'En Mantenimiento')"></div>
+        </div>
+        <div>
+          <div class="circle" [class.active]="calcularClaseCirculo(ordenSeleccionada.estado, 'Listo para Retiro/Envío')"></div>
+        </div>
+        <div>
+          <div class="circle" [class.active]="calcularClaseCirculo(ordenSeleccionada.estado, 'Orden finalizada')"></div>
+        </div>
+      </div>
+      <div class="progress-labels">
+        <span class="left">Recibido</span>
+        <span class="left">En Mantenimiento</span>
+        <span class="right">Listo para Retiro/Envío</span>
+        <span class="right">Orden Finalizada</span>
+      </div>
+    </div>
+    
+    
+    
+    <div class="additional-info">
+      <h4>Información Adicional:</h4>
+      <p>Estado de la Orden:<br>{{ ordenSeleccionada ? ordenSeleccionada.estado : 'No especificado' }}</p>
+      <p>Observaciones:<br>{{ ordenSeleccionada ? ordenSeleccionada.observaciones : 'No disponibles' }}</p>
+    </div>
+  </div>
+  </body>
+  

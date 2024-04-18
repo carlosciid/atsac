@@ -1,0 +1,118 @@
+/* Estilos generales */
+html, body {
+  height: 100%;  
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background: #f0f0f0; 
+}
+
+body {
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+}
+
+.order-tracking-container {
+  width: 100%;
+  max-width: 600px; 
+  padding: 20px;
+  background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box; 
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-order {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;            /* Estándar */
+  -webkit-appearance: none;    /* Para Chrome, Safari y versiones recientes de Opera */
+  -moz-appearance: textfield;  /* Para Firefox */
+}
+
+
+.btn-search {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #0056b3;
+}
+
+
+.status-section {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-circles {
+  display: flex;
+  justify-content: space-between; /* Asegura una distribución uniforme */
+  align-items: center;
+  position: relative;
+  height: 80px;
+}
+
+.progress-track {
+  position: absolute;
+  height: 4px;
+  background-color: #ccc;
+  width: 100%; /* Ajusta al 100% del contenedor para que se extienda por completo */
+  transform: translateY(-50%);
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative;
+  z-index: 1;
+}
+
+.circle.active {
+  background-color: #4CAF50;
+}
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Ajusta según sea necesario para espacio vertical */
+}
+
+.progress-labels span.left {
+  text-align: left; /* Alinea el texto de las etiquetas al centro */
+  flex: 1; /* Asegura que cada etiqueta ocupe espacio igual y se distribuya uniformemente */
+}
+.progress-labels span.right {
+  text-align: right; /* Alinea el texto de las etiquetas al centro */
+  flex: 1; /* Asegura que cada etiqueta ocupe espacio igual y se distribuya uniformemente */
+}
+
+.additional-info {
+  padding: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

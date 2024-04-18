@@ -1,0 +1,91 @@
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  color: #000000;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  padding: 15px;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown-content.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+}
+
+.dropdown-content.open .submenu {
+  display: flex;
+}
+
+.submenu a {
+  padding: 8px 16px;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.3s ease-out;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.links .link:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.button {
+  color: #000000;
+  cursor: pointer;
+}
+
+

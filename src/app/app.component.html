@@ -1,0 +1,39 @@
+<div class="navbar">
+  <div class="container">
+    <div class="content">
+      <!-- Enlace al inicio -->
+      <a routerLink="/">
+        <img class="logo" src="assets/Nuevo-Logo-AT-02.jpg" alt="Nuevo Logo" />
+      </a>
+    </div>
+    <div class="links">
+      <div class="link" [routerLink]="['/about-us']">Nosotros</div>
+      <div class="link" [routerLink]="['/services']">Servicios</div>
+      <div class="link" [routerLink]="['/contact-us']">Contacto</div>
+      <div class="dropdown" (click)="toggleDropdown()">
+        <div class="link">Saber más</div>
+        <div class="dropdown-content" [class.open]="isDropdownOpen">
+          <a [routerLink]="['/services']">Servicios</a>
+          <div class="submenu" [class.open]="isDropdownOpen">
+            <a [routerLink]="['/individual-services']">Personales</a> 
+            <a [routerLink]="['/business-services']">Empresas</a>
+          </div>
+          <a [routerLink]="['/plans']">Planes</a>
+          <div class="submenu" [class.open]="isDropdownOpen">
+            <a [routerLink]="['/individual-plans']">Personales</a>
+            <a [routerLink]="['/business-plans']">Empresas</a>
+            <a [routerLink]="['/maintenance-plans']">Mantenimiento</a>
+          </div>
+          <a [routerLink]="['/tracking']">Seguimiento</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="button" (click)="redirectToRegistration()">Regístrese</div>
+      <!--<div class="button inverted">Saber más</div>-->
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
